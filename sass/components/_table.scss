@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import "_config";
+#textWidthTempWrap{position:absolute;visibility:hidden;}
+.ucs-table{ border: 1px solid nth($global-table, 1);
+  th{ border: 1px solid nth($global-table, 1); @include height(20px); padding: 10px nth($global-table, 3); }
+  td{ border: 1px solid nth($global-table, 1); @include height(20px); padding: 10px nth($global-table, 3); text-align: center;
+    .text-auto {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+  }
+  .bg{ background: nth($global-table, 2) }
+  .align-left{ text-align: left }
+  .align-right{ text-align: right }
+  @at-root{
+    .ucs-table-1{
+      i{ vertical-align: middle; display: inline-block; width: 20px; @include height(20px); background: #1DC116 }
+    }
+    .ucs-table-2{
+      //下面两个为演示样式
+      .red{ color: #f00; }
+      .w-120{ width: 120px; }
+    }
+  }
+
+
+  table {
+    overflow:hidden;
+    background-color:#fff;
+    th{ @include height(20px); padding: 10px 10px; }
+    td{ @include height(20px); padding: 10px 10px; }
+    thead > tr, tbody > tr {
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+    thead > tr > th {
+      font-size: 14px;
+      position:relative;
+      background: #fff;
+      font-weight: bold;
+      -webkit-transition: background .3s ease;
+      transition: background .3s ease;
+      text-align: center;
+      word-break: break-all;
+      white-space: nowrap;
+      box-sizing: border-box;
+
+      &.checkbox {
+        text-align:center;
+      }
+
+      .th-span-subheader {
+        color:#999;
+      }
+
+      .sort-down, .sort-one, .sort-up {
+        position: absolute;
+        display: block;
+        width: 1rem;
+        right: 0;
+        top: 50%;
+      }
+
+      .sort-down, .sort-up {
+        height: 1rem;
+      }
+
+      .sort-up {
+        margin-top: -.6rem;
+      }
+
+      a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+        cursor:pointer;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .sort-down:before, .sort-up:before {
+        border-style: solid;
+        content: ' ';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        opacity: .2;
+        -webkit-transition: .2s;
+        transition: .2s;
+      }
+
+      .sort-up:before {
+        border-color: transparent transparent #333;
+        border-width: 0 .3rem .5rem;
+      }
+
+      .sort-down:before {
+        border-color: #333 transparent transparent;
+        border-width: .5rem .3rem 0;
+      }
+
+      .sort-down.active:after, .sort-down.active:before, .sort-down:hover:after, .sort-down:hover:before, .sort-up.active:after, .sort-up.active:before, .sort-up:hover:after, .sort-up:hover:before {
+        opacity: 1;
+      }
+      .sort-down.active, .sort-up.active {
+        cursor: default;
+      }
+    }
+
+
+    tbody > tr > td {
+      font-size: 12px;
+      border-bottom: 1px solid #e9e9e9;
+      position: relative;
+      word-break: break-all;
+      text-align: center;
+      color:#666;
+
+      &.checkbox {
+        text-align:center;
+      }
+
+      a {
+        text-decoration:none;
+        color:#f66000;
+      }
+
+      .td-desc {
+        color:#999;
+      }
+    }
+  }
+  /* 有边框 */
+  &.ucs-table-bordered {
+    table {
+      border: 1px solid #e5e5e5;
+      th {
+        border: 1px solid #e5e5e5;
+      }
+      td {
+        border: 1px solid #e5e5e5;
+      }
+    }
+  }
+  /* 隔行变色 */
+  &.ucs-table-striped {
+    table {
+      .odd-bg{ background: #fff }
+      .even-bg{ background: #ccc }
+    }
+  }
+  /* 悬浮变色 */
+  &.ucs-table-hover {
+    tbody > tr {
+      &:hover {
+        background-color: #e9e9e9;
+      }
+    }
+  }
+}

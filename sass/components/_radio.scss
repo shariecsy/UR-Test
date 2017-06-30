@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "_config";
+.ucs-radio{
+  $borderClolor: #999; //边框颜色
+  $borderClolorChcked: #108ee9; //checked状态颜色
+  $borderClolorDisabled: #ccc; //disabled状态颜色
+  $height: 12px;
+  cursor: pointer; display: inline-block; position: relative; padding-left: $height + 3; vertical-align: middle; overflow: hidden; height: $height+2; line-height: $height+2; margin-right: 10px;
+  .ucs-radio-input{ left: 0; top: 0; position: absolute; opacity: 0; cursor: pointer; z-index: 1; border: 1px solid transparent; }
+  .ucs-radio-inner{ left: 0; top: 0; position: absolute; cursor: pointer; border: 1px solid $borderClolor; width: $height; height: $height; border-radius: 50%;
+    &:after{
+      content: ' '; display: none; background-color: $borderClolorChcked; border: 0; height: $height / 2; left: $height / 4; top: $height /4; width: $height / 2; border-radius: 50%; position: absolute;
+    }
+  }
+  .text{ }
+  &.checked{
+    .ucs-radio-inner{ border-color: $borderClolorChcked;
+      &:after{
+        display: block;
+      }
+    }
+  }
+  &.disabled{ cursor: not-allowed;
+    .ucs-radio-input{ cursor: not-allowed; }
+    .ucs-radio-inner{ border-color: $borderClolorDisabled; cursor: not-allowed;
+      &:after{
+        background: $borderClolorDisabled;
+      }
+    }
+  }
+  &.lt8{
+    .ucs-radio-input{ *left: -3px; *top: -3px; }
+    //ie8或以下可用背景图片或原始显示
+    .ucs-radio-inner{ border: none; display: none }
+  }
+}

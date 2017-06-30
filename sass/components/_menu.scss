@@ -1,0 +1,96 @@
+@charset "utf-8";
+.ucs-menu {
+  color: #666;
+  >ul{
+    >li{
+      border-bottom: 2px solid transparent;
+      text-align: center;
+      line-height: 40px;
+      &:hover{
+        border-bottom-color: #3086d1;
+        color: #3086d1;
+      }
+      a{
+        display: block;
+        color: #666;
+        &:hover{
+          color: #3086d1;
+        }
+      }
+    }
+    /*禁用状态*/
+    .menu-disabled{
+      &:hover{
+        cursor: not-allowed;
+        border-bottom-color: transparent;
+        color: #666;
+      }
+      a{
+        color: #666;
+      }
+    }
+  }
+  /*二级子导航*/
+  .ucs-dropdown {
+    border-bottom: none;
+    .sub-menu{
+      display: none;
+    }
+    &.down{
+      color: #666;
+      .sub-menu {
+        display: block;
+        background: #ebebeb;
+      }
+    }
+    .menu-title{
+      border-bottom: 2px solid transparent;
+    }
+    &:hover{
+      .menu-title{
+        border-bottom-color: #3086d1;
+      }
+    }
+  }
+}
+/*水平排列*/
+.menu-horizontal{
+  height: 42px;
+  >ul {
+    &:after {
+      @include clear();
+    }
+    >li {
+      float: left;
+      width: 25%;
+    }
+  }
+}
+/*垂直排列*/
+.menu-inline{
+  width: 220px;
+}
+/*垂直排列*/
+.menu-vertical{
+  width: 220px;
+  >ul{
+    >li{
+      border-bottom: none;
+      &:hover{
+        background: #ebebeb;
+      }
+    }
+  }
+  .ucs-dropdown{
+    position: relative;
+    .menu-title{
+      border-bottom:none;
+    }
+  }
+  .sub-menu{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,175 @@
+/* the tree node's style */
+.ucs-switch-small {
+  height: 14px;
+  line-height: 12px;
+  min-width: 28px;
+  &:after {
+    height: 12px;
+    left: 0.5px;
+    top: 0;
+    width: 12px;
+  }
+  .ucs-switch-inner {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    margin-left: 24px;
+    margin-right: 6px;
+  }
+
+  &.ucs-switch {
+    -moz-user-select: none;
+    background: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    line-height: 12px;
+    min-width: 28px;
+    position: relative;
+    vertical-align: middle;
+    &:after {
+      background-color: #fff;
+      border-radius: 18px;
+      content: " ";
+      cursor: pointer;
+      height: 12px;
+      left: 0.5px;
+      position: absolute;
+      top: 0px;
+      transition: all 0.3s ease 0s, width 0.3s ease 0s;
+      width: 12px;
+    }
+
+    .ucs-switch-inner {
+      color: #fff;
+      display: block;
+      font-size: 8px;
+      margin-left: 15px;
+      margin-right: 3px;
+    }
+
+    &.ucs-switch-checked {
+      background-color: #108ee9;
+      border-color: #108ee9;
+      &:after {
+        left: 100%;
+        margin-left: -12px;
+      }
+      .ucs-switch-inner {
+        margin-left: 3px;
+        margin-right: 15px;
+      }
+    }
+
+    &.ucs-switch-disabled {
+      .ucs-switch-inner {
+        color: #ccc;
+      }
+    }
+  }
+
+  &.ucs-switch-checked {
+    background-color: #108ee9;
+    border-color: #108ee9;
+    &:after {
+      left: 100%;
+      margin-left: -12px;
+    }
+    .ucs-switch-inner {
+      margin-left: 6px;
+      margin-right: 24px;
+    }
+
+    &.ucs-switch-disabled {
+      background: #f4f4f4 none repeat scroll 0 0;
+      border-color: #f4f4f4;
+      cursor: not-allowed;
+      &:after {
+        background: #ccc none repeat scroll 0 0;
+        cursor: not-allowed;
+      }
+      .ucs-switch-inner {
+        color: #ccc;
+      }
+    }
+  }
+}
+
+.ucs-switch {
+  -moz-user-select: none;
+  background: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  line-height: 20px;
+  min-width: 44px;
+  position: relative;
+  vertical-align: middle;
+  &:after {
+    background-color: #fff;
+    border-radius: 18px;
+    content: " ";
+    cursor: pointer;
+    height: 18px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    transition: all 0.3s ease 0s, width 0.3s ease 0s;
+    width: 18px;
+  }
+
+  .ucs-switch-inner {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    margin-left: 24px;
+    margin-right: 6px;
+  }
+
+  &.ucs-switch-checked {
+    background-color: #108ee9;
+    border-color: #108ee9;
+    &:after {
+      left: 100%;
+      margin-left: -19px;
+    }
+    .ucs-switch-inner {
+      margin-left: 6px;
+      margin-right: 24px;
+    }
+  }
+
+  &.ucs-switch-disabled {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border-color: #f4f4f4;
+    cursor: not-allowed;
+    &:after {
+      background: #ccc none repeat scroll 0 0;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.ucs-switch-disabled {
+  background: #f4f4f4 none repeat scroll 0 0;
+  border-color: #f4f4f4;
+  cursor: not-allowed;
+  &:after {
+    background: #ccc none repeat scroll 0 0;
+    cursor: not-allowed;
+  }
+  .ucs-switch-inner {
+    color: #ccc;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+@charset "utf-8";
+.slider-warp{ position:relative}
+.ucs-slider{height:325px;position:relative;z-index:1;margin-top:-1px; background:#e34040}
+.ucs-slider .ucs-slider-list{height: 100%;}
+.ucs-slider .ucs-slider-item{position:absolute;left:0;top:0;height:325px;width:100%; overflow:hidden; display:none}
+.ucs-slider .active-item{display: block;}
+.ucs-slider .inner{width:1000px;height:325px;margin:0 auto;position:relative}
+.ucs-slider .prev,.ucs-slider .next{width:19px;height:30px; overflow:hidden;position:absolute;top:48%;background:url("../examples/images/icon.png") no-repeat;}
+.ucs-slider .prev{left:8%; background-position:-374px -178px}
+.ucs-slider .next{right:8%;background-position:-382px -150px}
+.ucs-slider .dots{position:absolute;left:0;bottom:60px;width:100%;text-align:center;z-index:10;}
+.ucs-slider .dots ul{width:1000px;margin:0 auto;display:block;text-align:center}
+.ucs-slider .dots ul li{display:inline;width:40px;height:5px;margin:0 2px;}
+.ucs-slider .dots ul li a{display:inline-block;width:40px;height:5px;margin-top:2px;background:#a10b12}
+.ucs-slider .dots ul li.current a{background:#fff}
+.banner-inner{height:330px;}
+.banner-inner .banner-item{height:330px;}
+.banner-login{height:500px;}
+.banner-login .banner-item{height:500px;}
